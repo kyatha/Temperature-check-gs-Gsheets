@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base target="_top">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <?!= include('JavaScript'); ?>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form id="myForm" onsubmit="handleFormSubmit(this)">
+                        <p class="h4 mb-4 text-center">Daily Temperature Check</p>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="first_name">English Name</label>
+                                <input type="text" class="form-control" id="english_name" name="english_name" placeholder="English Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="korean_name">Korean Name</label>
+                                <input type="text" class="form-control" id="korean_name" name="korean_name" placeholder="Korean Name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                                <div class="form-group col-md-6">
+                                <p>I have the following symptoms</p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="cough" value="cough">
+                                    <label class="form-check-label" for="cough">Cough</label>
+                                </div>
+                                
+                          <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="fever" value="fever">
+                                    <label class="form-check-label" for="female">Fever</label>
+                                </div>
+                                
+                              
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="sneeze" value="sneezing">
+                                    <label class="form-check-label" for="sneeze">Sneezing</label>
+                                </div>
+                                
+                                 <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="all" value="all">
+                                    <label class="form-check-label" for="all">All</label>
+                                </div>
+                                
+                                    <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="gender" id="none" value="none">
+                                    <label class="form-check-label" for="none">None</label>
+                                </div>
+                            </div>
+                            
+                     
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                        
+                         <div class="form-group">
+                            <label for="temp">Temperature °C</label>
+                            <input type="number" class="form-control" id="temp" name="temp" placeholder="temperature">
+                        </div>
+                        
+                        <!--<div class="form-group">
+                            <label for="temp">Thermometer Image</label>
+                            <input type="file" class="form-control" id="ther" name="ther" value="upload">
+                        </div> -->
+
+
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                    <div id="output"></div>
+                </div>
+            </div>      
+        </div>
+    </body>
+</html>
+
+
